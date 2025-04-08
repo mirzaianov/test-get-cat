@@ -1,0 +1,17 @@
+:root {
+  --neutral-00: #ffffff;
+  --neutral-10: #f8f8f8;
+  --neutral-20: #bebebe;
+  --neutral-90: #000000;
+
+  --text-90: #000000;
+
+  --2xs: 4px;
+  --xs: 8px;
+  --s: 16px;
+  --m: 24px;
+  --l: 32px;
+  --xl: 40px;
+  --2xl: 56px;
+  --3xl: 80px;
+}

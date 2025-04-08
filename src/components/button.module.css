@@ -1,0 +1,14 @@
+.button {
+  background-color: var(--neutral-10);
+  border: 1px solid var(--neutral-20);
+  padding: var(--button-padding);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--neutral-20);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

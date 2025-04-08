@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Include paddings/border in the element size */
+}
+
+* {
+  margin: 0; /* Remove default margins */
+}
+
+html {
+  -moz-text-size-adjust: none; /* Prevent font size inflation in Firefox */
+  -webkit-text-size-adjust: none; /* Prevent font size inflation in Safari */
+  text-size-adjust: none; /* Prevent font size inflation in other browsers */
+  height: 100%; /* Set full height of the parent container */
+  scroll-behavior: smooth; /* Enable smooth scrolling animation */
+}
+
+body {
+  -webkit-font-smoothing: antialiased; /* Enable smooth font edges in WebKit browsers */
+  min-height: 100%; /* Set minimum height to match parent */
+  line-height: 1.5; /* Set comfortable reading line spacing */
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex; /* Add vertical scroll margin of 5 × letter height */
+}
+
+/* -IMAGES--------------------------------------------------------------------------------------- */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* Stack elements vertically */
+  max-width: 100%; /* Prevent overflow and enable responsive scaling */
+}
+
+/* -FORMS---------------------------------------------------------------------------------------- */
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit; /* Use parent's font family */
+  font: inherit; /* Match parent's font properties */
+}
+
+textarea:not([rows]) {
+  min-height: 10em; /* Make sure textareas without a rows attribute are not tiny */
+}
+
+/* -TYPOGRAPHY----------------------------------------------------------------------------------- */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+p,
+li,
+figcaption {
+  max-width: 65ch; /* Set maximum width */
+  text-wrap: pretty; /* Prettify text wrapping */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance; /* Balance text wrapping */
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1; /* Set shorter line heights */
+}
+
+/* -CONTAINER-QUERIES---------------------------------------------------------------------------- */
+
+/* Enable size-based container queries for inline axis */
+/* header,
+main,
+footer,
+section,
+article,
+aside {
+  container-type: inline-size;
+} */
+
+/* -LINKS---------------------------------------------------------------------------------------- */
+
+/* Anchor elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; /* Optimize underline gaps around letters */
+  color: currentColor; /* Inherit text color from parent */
+}
+
+/* -LISTS---------------------------------------------------------------------------------------- */
+
+/* For classed lists */
+:where(ul, ol):where([class]) {
+  padding-left: 0; /* Remove default list padding */
+}
+
+/* For classed unordered lists */
+:where(ul[class]) {
+  list-style: none; /* Remove default list bullets */
+}
+
+/* -COMPONENTS----------------------------------------------------------------------------------- */
+
+/* For React and Next.js */
+#root,
+#__next {
+  isolation: isolate; /* Create a new stacking context and prevent blend mode leaks */
+}
+
+/* -MOTION--------------------------------------------------------------------------------------- */
+
+/* Respect user's motion preferences by minimizing animations for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important; /* Set minimal animation time */
+    animation-iteration-count: 1 !important; /* Force single animation run */
+    transition-duration: 0.01ms !important; /* Set minimal transition time */
+    scroll-behavior: auto !important; /* Disable smooth scrolling */
+  }
+}

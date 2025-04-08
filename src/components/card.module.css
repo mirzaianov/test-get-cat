@@ -1,0 +1,4 @@
+.card {
+  width: min(100%, 21.25rem);
+  border: 1px solid red;
+}
