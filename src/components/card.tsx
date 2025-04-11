@@ -18,25 +18,27 @@ export default function Card() {
 
   return (
     <div className={styles.card}>
-      <Controls
-        isEnabled={isEnabled}
-        setIsEnabled={setIsEnabled}
-        isRefreshing={isRefreshing}
-        setIsRefreshing={setIsRefreshing}
-      />
-      <Button
-        handleClick={fetchData}
-        isEnabled={isEnabled}
-      />
-      {error && <div>Error: {error.message}</div>}
-      {!isLoading && data && data.length > 0 ? (
-        <Image
-          catData={data[0]}
+      <div className={styles.wrapper}>
+        <Controls
+          isEnabled={isEnabled}
+          setIsEnabled={setIsEnabled}
+          isRefreshing={isRefreshing}
+          setIsRefreshing={setIsRefreshing}
+        />
+        <Button
+          handleClick={fetchData}
           isEnabled={isEnabled}
         />
-      ) : (
-        <ImageSkeleton />
-      )}
+        {error && <div>Error: {error.message}</div>}
+        {!isLoading && data && data.length > 0 ? (
+          <Image
+            catData={data[0]}
+            isEnabled={isEnabled}
+          />
+        ) : (
+          <ImageSkeleton />
+        )}
+      </div>
     </div>
   );
 }

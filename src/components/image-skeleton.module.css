@@ -1,14 +1,5 @@
-.wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 .skeleton {
   width: 100%;
-  aspect-ratio: 1 / 1;
   background-color: var(--neutral-20);
   border-radius: var(--s);
   display: flex;
