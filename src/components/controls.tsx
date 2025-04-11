@@ -15,7 +15,7 @@ export default function Controls({
 }: ControlsProps) {
   return (
     <ul className={styles.controls}>
-      <li>
+      <li className={styles.inputWrapper}>
         <input
           id="isEnabled"
           type="checkbox"
@@ -24,7 +24,7 @@ export default function Controls({
         />
         <label htmlFor="isEnabled">Enabled</label>
       </li>
-      <li>
+      <li className={styles.inputWrapper}>
         <input
           id="isRefreshing"
           type="checkbox"
