@@ -4,10 +4,10 @@
 body {
   font-family: 'Inter', sans-serif;
   color: var(--neutral-90);
-  background-color: var(--neutral-10);
+  background-color: var(--neutral-00);
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 h1 {
@@ -22,12 +22,12 @@ h1 {
 
 @media (min-width: 768px) {
   body {
-    padding-top: 2rem;
+    padding: 2rem 0;
   }
 }
 
 @media (min-width: 1280px) {
   body {
-    padding-top: 4rem;
+    padding: 4rem 0;
   }
 }

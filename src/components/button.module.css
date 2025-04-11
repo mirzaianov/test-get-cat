@@ -1,8 +1,9 @@
 .button {
-  background-color: var(--neutral-10);
-  border: 1px solid var(--neutral-20);
-  padding: var(--button-padding);
+  border: none;
+  outline: 1px solid var(--neutral-20);
+  padding: var(--xs) var(--m);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: var(--neutral-20);
@@ -10,5 +11,9 @@
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &:active {
+    transform: scale(1.05);
   }
 }
