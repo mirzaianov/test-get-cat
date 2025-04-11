@@ -3,5 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid lime;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .app {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app {
+    gap: 3rem;
+  }
 }
