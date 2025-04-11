@@ -1,6 +1,6 @@
 ![MasterHead](./head.gif)
 
-# ~{ Get Cat }~ Test Project
+# GET CAT Test Project
 
 ## Description
 
