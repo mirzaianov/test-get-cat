@@ -1,45 +1,46 @@
-![MasterHead](./head.png)
+![MasterHead](./head.gif)
 
-# NAME OF THE PROJECT
+# ~{ Get Cat }~ Test Project
 
 ## Description
 
-### Short description
+### An app that fetches cats from an API endpoint and renders them as a card
 
 ### Features
 
-- Some feature
-- Some feature
-- Some feature
+- Pixel-Perfect layout
+- More than 3 components (CSS Modules)
+- Fetching from a REST-API
 
 ### Dependencies
 
 - `Vite`
-- `React` • `Tailwind`
+- `React` • `CSS Modules`
 
 ## Installation & Execution
 
-### Install via Vite:
+### Install via Vite
 
-    npm create vite@latest
-    cd my-project
-    npm install
+```bash
+  git clone https://github.com/mirzaianov/test-get-cat.git
+  cd test-get-cat
+  pnpm install
+```
 
-### Run in the development mode:
+### Run in the development mode
 
-    npm run dev
+```bash
+  pnpm run dev
+```
 
-Vite will start frontend server on http://localhost:5173/
+Vite will start frontend server on [http://localhost:5173/](http://localhost:5173/)
 
-## Building and Running for Production
+### Or open the deployed site
 
-    npm run build
-    npm run preview
-
-Vite will start frontend server on http://localhost:4173/
+[https://get-cat-mirzaianov.vercel.app/](https://get-cat-mirzaianov.vercel.app/)
 
 ## License
 
 ### MIT license
 
-You can use the code, but I ask you do not copy this site without giving me credit.
+You can use the code, but I ask you do not copy this site without giving me credit
