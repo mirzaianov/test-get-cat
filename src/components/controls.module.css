@@ -10,6 +10,10 @@
   gap: 0.5rem;
 }
 
+label {
+  cursor: pointer;
+}
+
 input[type='checkbox'] {
   margin: 0;
   padding: 0;
@@ -26,4 +30,9 @@ input[type='checkbox']:checked {
   appearance: auto;
   accent-color: var(--neutral-20);
   transition: accent-color 0.3s ease-in-out;
+}
+
+input[type='checkbox']:disabled,
+input[type='checkbox']:disabled + label {
+  cursor: not-allowed;
 }

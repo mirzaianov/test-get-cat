@@ -17,14 +17,14 @@ export default function Card() {
   const { data, isLoading, error, fetchData } = useFetch<CatData[]>(API_URL);
 
   useEffect(() => {
-    if (isRefreshing) {
+    if (isEnabled && isRefreshing) {
       const interval = setInterval(() => {
         fetchData();
-      }, 5000);
+      }, 2000);
 
       return () => clearInterval(interval);
     }
-  }, [isRefreshing, fetchData]);
+  }, [isEnabled, isRefreshing, fetchData]);
 
   return (
     <div className={styles.card}>

@@ -13,6 +13,10 @@
     cursor: not-allowed;
   }
 
+  &:disabled:hover {
+    background-color: var(--neutral-10);
+  }
+
   &:active {
     transform: scale(1.05);
   }
