@@ -20,7 +20,7 @@ export default function Card() {
     if (isEnabled && isRefreshing) {
       const interval = setInterval(() => {
         fetchData();
-      }, 2000);
+      }, 5000);
 
       return () => clearInterval(interval);
     }
