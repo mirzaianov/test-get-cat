@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ImageSkeleton from './image-skeleton';
 import useFetch from '../hooks/useFetch';
 import { API_URL } from '../constants';
@@ -16,6 +16,16 @@ export default function Card() {
 
   const { data, isLoading, error, fetchData } = useFetch<CatData[]>(API_URL);
 
+  useEffect(() => {
+    if (isRefreshing) {
+      const interval = setInterval(() => {
+        fetchData();
+      }, 5000);
+
+      return () => clearInterval(interval);
+    }
+  }, [isRefreshing, fetchData]);
+
   return (
     <div className={styles.card}>
       <div className={styles.wrapper}>
@@ -29,14 +39,13 @@ export default function Card() {
           handleClick={fetchData}
           isEnabled={isEnabled}
         />
+        {isLoading && <ImageSkeleton />}
         {error && <div>Error: {error.message}</div>}
-        {!isLoading && data && data.length > 0 ? (
+        {!isLoading && data && data.length > 0 && (
           <Image
             catData={data[0]}
             isEnabled={isEnabled}
           />
-        ) : (
-          <ImageSkeleton />
         )}
       </div>
     </div>
