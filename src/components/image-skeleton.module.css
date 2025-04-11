@@ -1,0 +1,34 @@
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.skeleton {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--neutral-20);
+  border-radius: var(--s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton svg {
+  width: 75%;
+  height: 75%;
+  stroke: var(--neutral-10);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import ImageSkeleton from './image-skeleton';
 import useFetch from '../hooks/useFetch';
 import { API_URL } from '../constants';
 import Controls from './controls';
@@ -7,7 +9,6 @@ import Image from './image';
 import styles from './card.module.css';
 
 import { type CatData } from '../types';
-import { useState } from 'react';
 
 export default function Card() {
   const [isEnabled, setIsEnabled] = useState<boolean>(true);
@@ -27,13 +28,14 @@ export default function Card() {
         handleClick={fetchData}
         isEnabled={isEnabled}
       />
-      {isLoading && <div>Loading...</div>}
       {error && <div>Error: {error.message}</div>}
-      {!isLoading && data && data.length > 0 && (
+      {!isLoading && data && data.length > 0 ? (
         <Image
           catData={data[0]}
           isEnabled={isEnabled}
         />
+      ) : (
+        <ImageSkeleton />
       )}
     </div>
   );
