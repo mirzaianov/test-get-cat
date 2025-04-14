@@ -1,0 +1,12 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  outline: 1px solid var(--accent-15);
+  padding: 1rem;
+  color: var(--text-15);
+}
+
+.error code {
+  font-size: 1rem;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ImageSkeleton from './image-skeleton';
 import useFetch from '../hooks/useFetch';
 import { API_URL } from '../constants';
+import Error from './error';
 import Controls from './controls';
 import Button from './button';
 import Image from './image';
@@ -40,7 +41,7 @@ export default function Card() {
           isEnabled={isEnabled}
         />
         {isLoading && <ImageSkeleton />}
-        {error && <div>Error: {error.message}</div>}
+        {error && <Error error={error} />}
         {!isLoading && data && data.length > 0 && (
           <Image
             catData={data[0]}
